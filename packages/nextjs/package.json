@@ -9,11 +9,12 @@
     "format": "prettier --write . '!(node_modules|.next|contracts)/**/*'",
     "lint": "next lint",
     "serve": "next start",
-    "start": "next dev",
+    "start": "next dev --turbo",
     "vercel": "vercel",
     "vercel:yolo": "vercel --build-env NEXT_PUBLIC_IGNORE_BUILD_ERROR=true"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.7.2",
     "@heroicons/react": "~2.1.5",
     "@rainbow-me/rainbowkit": "2.1.6",
     "@tanstack/react-query": "~5.28.6",
@@ -23,6 +24,7 @@
     "burner-connector": "~0.0.8",
     "daisyui": "4.12.10",
     "next": "~14.2.11",
+    "next-auth": "beta",
     "next-nprogress-bar": "~2.3.13",
     "next-themes": "~0.3.0",
     "qrcode.react": "~3.1.0",
@@ -37,6 +39,7 @@
     "zustand": "~4.1.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
     "@trivago/prettier-plugin-sort-imports": "~4.1.1",
     "@types/node": "~18.19.50",
     "@types/react": "~18.3.5",
