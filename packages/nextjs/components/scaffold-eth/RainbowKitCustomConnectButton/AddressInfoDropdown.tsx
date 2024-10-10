@@ -16,9 +16,7 @@ import {
 import { BlockieAvatar, isENS } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 import { getTargetNetworks } from "~~/utils/scaffold-eth";
-import { signIn } from "next-auth/react";
-import { useUser } from "@clerk/nextjs";
-import { SignIn, SignInButton, SignOutButton } from "@clerk/clerk-react";
+
 
 
 const allowedNetworks = getTargetNetworks();
@@ -49,7 +47,6 @@ export const AddressInfoDropdown = ({
   };
   useOutsideClick(dropdownRef, closeDropdown);
 
-  const {user} = useUser()
 
   return (
     <>
@@ -127,10 +124,7 @@ export const AddressInfoDropdown = ({
               </button>
             </li>
           ) : null}
-          <li>
-            {!user && <SignInButton/>}
-            {user && <SignOutButton/>}
-          </li>
+
           <li className={selectingNetwork ? "hidden" : ""}>
             <button
               className="menu-item text-error btn-sm !rounded-xl flex gap-3 py-3"
