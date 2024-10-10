@@ -1,12 +1,15 @@
 "use client";
 
 import { useLocalStorage } from '@uidotdev/usehooks'
+import { useAccount } from 'wagmi';
 import { DonationCard, type InfoDonationCard } from "~~/components/DonationCard";
-
+import { useScaffoldWriteContract } from '~~/hooks/scaffold-eth';
+import { parseEther } from "viem";
 
 export default function Page({ params }: { params: { id: number } }) {
   const [donation, setDonation] = useLocalStorage<InfoDonationCard[]>("donations")
-
+  const { address: connectedAddress } = useAccount();
+  const { writeContractAsync: writeYourContractAsync } = useScaffoldWriteContract("Donation");
   const { description, donate, id, max_donation, n_donation, name } = donation[params.id]
   return (
     <main className="m-6 space-y-6">
@@ -19,7 +22,17 @@ export default function Page({ params }: { params: { id: number } }) {
           </div>
         </div>
       </div>
-        <div className='btn btn-primary shadow-none w-full'>Donate now</div>
+        <button onClick={async () => {
+          try {
+            await writeYourContractAsync({
+              functionName: "donate",
+
+              value: parseEther("0"),
+            });
+          } catch (e) {
+            console.error("Error setting greeting:", e);
+          }
+        }} className='btn btn-primary shadow-none w-full'>Donate now</button>
     </main>
   )
 }
