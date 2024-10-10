@@ -27,7 +27,7 @@ export default function Page({ params }: { params: { id: number } }) {
             await writeYourContractAsync({
               functionName: "donate",
 
-              value: parseEther("0"),
+              value: parseEther(donate.toString()),
             });
           } catch (e) {
             console.error("Error setting greeting:", e);
