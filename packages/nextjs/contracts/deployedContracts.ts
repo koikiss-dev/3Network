@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     Donation: {
-      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      address: "0x2E983A1Ba5e8b38AAAeC4B440B9dDcFBf72E15d1",
       abi: [
         {
           inputs: [],
@@ -96,7 +96,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     YourContract: {
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      address: "0x663F3ad617193148711d28f5334eE4Ed07016602",
       abi: [
         {
           inputs: [
