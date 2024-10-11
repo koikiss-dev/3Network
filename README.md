@@ -1,21 +1,24 @@
-# 🏗 Scaffold-ETH 2
+# 3network
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+## Inspiración
+La falta de confianza en las plataformas centralizadas de donaciones inspiró la creación de 3network. Queríamos proporcionar una solución transparente, directa y segura para que los donantes vean el impacto real de sus contribuciones.
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+## Qué hace
+3network es una plataforma basada en blockchain que permite a los donantes contribuir directamente a causas benéficas. Elimina intermediarios y garantiza la transparencia en el uso de los fondos.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+## Cómo lo creamos
+Utilizamos tecnología blockchain para registrar todas las transacciones de donaciones de manera pública y transparente. También implementamos Web3 para descentralizar la gestión de fondos y reducir costos operativos.
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+## Retos que tuvimos
+Enfrentamos desafíos relacionados con la integración de tecnología blockchain y la creación de una experiencia de usuario simple. También tuvimos que optimizar la escalabilidad y seguridad de la plataforma.
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+## Lo que aprendimos
+Aprendimos a utilizar tecnologías emergentes como blockchain y Web3 para resolver problemas de confianza y transparencia. Además, descubrimos la importancia de crear una interfaz intuitiva para maximizar la accesibilidad.
+
+## Qué es lo siguiente
+Nos enfocaremos en expandir la plataforma globalmente, integrando más causas internacionales y explorando la implementación de NFTs como recompensas para los donantes.
+
+---
 
 ## Requirements
 
@@ -57,24 +60,3 @@ This command deploys a test smart contract to the local network. The contract is
 ```
 yarn start
 ```
-
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
-
-Run smart contract test with `yarn hardhat:test`
-
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/hardhat/deploy`
-
-
-## Documentation
-
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
-
-To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
